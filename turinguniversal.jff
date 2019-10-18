@@ -419,8 +419,8 @@
 		<transition>&#13;
 			<from>27</from>&#13;
 			<to>28</to>&#13;
-			<read>X</read>&#13;
-			<write>X</write>&#13;
+			<read>t</read>&#13;
+			<write>t</write>&#13;
 			<move>R</move>&#13;
 		</transition>&#13;
 		<transition>&#13;
