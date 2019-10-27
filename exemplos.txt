@@ -3,5 +3,6 @@
 3. q1a1a11Rq11#q11ba1Rq111#q111ba11Rf$a1 - É para ser rejeitado
 4. q1bbRf$b - É para aceitar
 5. q1bbRq11$b - é para rejeitar
+6. q1a1bRq1#q1ba1Rf$a1a1a1a1b - é pra aceitar, mas tá dando erro
 
 x1. q1a11a1Rq11#q11a11a111Lf#q11a1a11Rq1$a11a1 - Não sei
