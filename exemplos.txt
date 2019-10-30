@@ -6,5 +6,6 @@
 6. q1a1bRq1#q1ba1Rf$a1a1b - é pra aceitar
 7. q1a1bLq1#q1ba1Lf$a1a1b - é pra aceitar
 8. q1a1bLq11#q11ba1Lq111#q111ba1111Lf$a1 - é para aceitar
+9. q1a1a11Rq1#q1a11bRq11$a1a11a1a11a1a11 - deveria aceitar, mas está recusando
 
 x1. q1a11a1Rq11#q11a11a111Lf#q11a1a11Rq1$a11a1 - Não sei
