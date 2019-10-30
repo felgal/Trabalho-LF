@@ -54,7 +54,7 @@ def encode(mt, entrada):
 
         codigo += movimento
 
-        codigo += 'q1' + ('1' * destino)o)])
+        codigo += 'q1' + ('1' * destino)
 
         transicoes_codificadas.append(codigo)
         # print(codigo)
