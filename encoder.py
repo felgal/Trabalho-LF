@@ -1,6 +1,6 @@
 from xml.dom import minidom
 
-def encode(mt, palavra):
+def encode(mt, entrada):
     maquina_xml = minidom.parse(mt)
 
     
@@ -11,7 +11,7 @@ def encode(mt, palavra):
 
     transicoes = maquina_xml.getElementsByTagName("transition")
 
-    resposta = []
+    transicoes_codificadas = []
 
     simbolos = []
 
@@ -56,19 +56,19 @@ def encode(mt, palavra):
 
         codigo += 'q1' + ('1' * destino)o)])
 
-        resposta.append(codigo)
+        transicoes_codificadas.append(codigo)
         # print(codigo)
         # print(origem, "-", destino, "-", leitura, "-", escrita, "-", movimento)
 
-    palavra_final = ''
+    palavra_codificada = ''
 
-    for caracter in palavra:
+    for caracter in entrada:
         if caracter not in simbolos:
             simbolos.append(caracter)
-        palavra_final += 'a1' + ('1' * simbolos.index(caracter)) 
+        palavra_codificada += 'a1' + ('1' * simbolos.index(caracter)) 
 
     print("\nResultado:\n")
-    print('#'.join(resposta) + '$' + palavra_final)
+    print('#'.join(transicoes_codificadas) + '$' + palavra_codificada)
 
     print('\n--------------------------------\n\nTabela de símbolos:\n')
 
