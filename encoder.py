@@ -13,10 +13,12 @@ def encode(mt, entrada):
     estado_final = None
 
     for estado in estados:
-        # TODO garantir que só tem um estado final
         if estado.getElementsByTagName("final"):
-            estado_final = int(estado.getAttribute("id"))
-            break
+            if estado_final:
+                print("SÓ PODE EXISTIR UM ESTADO FINAL")
+                return
+            else:
+                estado_final = int(estado.getAttribute("id"))
 
     transicoes = maquina_xml.getElementsByTagName("transition")
 
