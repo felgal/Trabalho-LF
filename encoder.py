@@ -8,6 +8,15 @@ def encode(mt, entrada):
     if tipo.firstChild.data != 'turing':
         print("ISSO NÃO É UMA MÁQUINA DE TURING")
     
+    estados = maquina_xml.getElementsByTagName("state")
+
+    estado_final = None
+
+    for estado in estados:
+        # TODO garantir que só tem um estado final
+        if estado.getElementsByTagName("final"):
+            estado_final = int(estado.getAttribute("id"))
+            break
 
     transicoes = maquina_xml.getElementsByTagName("transition")
 
@@ -46,7 +55,7 @@ def encode(mt, entrada):
 
         # print("Leitura: ", leitura, " - Escrita: ", escrita)
 
-        codigo = "q1" + ('1' * origem)
+        codigo = 'q1' + ('1' * origem) if origem != estado_final else 'f'
 
         codigo += 'a1' + ('1' * simbolos.index(leitura)) if leitura else 'b'
 
@@ -54,7 +63,7 @@ def encode(mt, entrada):
 
         codigo += movimento
 
-        codigo += 'q1' + ('1' * destino)
+        codigo += 'q1' + ('1' * destino) if destino != estado_final else 'f'
 
         transicoes_codificadas.append(codigo)
         # print(codigo)
