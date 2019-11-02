@@ -39,10 +39,10 @@ def encode(mt, entrada):
         escrita = escrita.firstChild.data if escrita.hasChildNodes() else None
         movimento = movimento.firstChild.data
         
-        if '!' in leitura:
+        if leitura and '!' in leitura:
             print("MÁQUINA DE TURING NÃO PODE USER O OPERADOR '!' DO JFLAP")
             return
-        if escrita == '~':
+        if escrita and escrita == '~':
             print("MÁQUINA DE TURING NÃO PODE USER O OPERADOR '~' DO JFLAP")
             return
         if movimento == 'S':
